@@ -45,14 +45,21 @@
 
 // });
 
-Route::get('/kantin/{makanan}/{minuman}/{cemilan}',function($a,$b,$c){
-	return 'Saya pesan <b>'.$a.'</b><br>'
-		   .'minumnya <b>'.$b.'</b><br>'
-		   .'cemilannya <b>'.$c.'</b><br>';
+// Route::get('/kantin/{makanan}/{minuman}/{cemilan}',function($a,$b,$c){
+// 	return 'Saya pesan <b>'.$a.'</b><br>'
+// 		   .'minumnya <b>'.$b.'</b><br>'
+// 		   .'cemilannya <b>'.$c.'</b><br>';
 
-});
+// });
 
-Route::get('user/{nama?}',function($name = 'John'){
-	return 'Nama saya '.$name;
+// Route::get('user/{nama?}',function($name = 'John'){
+// 	return 'Nama saya '.$name;
+// }):
 
+//tes akses model
+
+Route::get('tesmodel',function(){
+	//menampilkan semua data yang ada ditable posts melalui model post
+	$a = App\Post::all();
+	return $a;
 });
